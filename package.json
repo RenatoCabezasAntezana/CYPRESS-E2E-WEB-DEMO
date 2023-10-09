@@ -6,7 +6,7 @@
   "scripts": {
     "test": "cypress open",
     "runChrome": "cypress run",
-    "start":"npx cypress run --record --key facc9249-7a1b-4e7b-acc1-e3d47387fef7"
+    "start": "npx cypress run --record --key facc9249-7a1b-4e7b-acc1-e3d47387fef7"
   },
   "keywords": [
     "e2e",
@@ -26,10 +26,10 @@
     "filterSpecs": true,
     "omitFiltered": true,
     "stepDefinitions": [
-      "cypress/e2e/step-definitions/*.{js,ts}"
+      "cypress/e2e/**/step-definitions/*.{js,ts}"
     ]
   },
   "dependencies": {
-    "cypress-tags": "^1.1.2"
+    "pg": "^8.11.3"
   }
 }
