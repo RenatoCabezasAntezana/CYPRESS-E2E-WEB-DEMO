@@ -1,5 +1,6 @@
-Feature: Login to the Application
+Feature: Feature name
 
+    Feature Description
     @HappyPath
     Scenario: Successful Login
         Given the user is on the login page
