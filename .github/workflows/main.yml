@@ -9,6 +9,6 @@ jobs:
        - name: Cypress.io
          uses: cypress-io/github-action@fd50b628255d62107377b511f928e6ebec975179
          with:
-          install-command: npm install
+        #install-command: npm install
           start: npm start
         
