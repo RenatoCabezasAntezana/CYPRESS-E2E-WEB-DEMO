@@ -5,6 +5,7 @@ const addCucumberPreprocessorPlugin =
 const createEsbuildPlugin =
   require("@badeball/cypress-cucumber-preprocessor/esbuild").createEsbuildPlugin;
 const pg = require("pg");
+const {Client} = require("pg");
 
 module.exports = defineConfig({
   chromeWebSecurity: false,
@@ -25,8 +26,8 @@ module.exports = defineConfig({
       await addCucumberPreprocessorPlugin(on, config);
 
       on("task", {
-        DATABASE({ dbconfig, sql }) {
-          const client = new pg.Pool(dbconfig);
+        DATABASE({ dbConfig, sql }) {
+          const client = new pg.Pool(dbConfig);
           return client.query(sql)
         },
       });

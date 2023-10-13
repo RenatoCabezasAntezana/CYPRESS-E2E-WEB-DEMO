@@ -25,10 +25,3 @@ Feature: Login to the Application
         And clicks the login button
         Then the user should see an error message "Epic sadface: Username and password do not match any user in this service" indicating the message error
 
-    @HappyPath
-    Scenario: Successful Login Renato
-        Given the user is on the login page
-        When the user enters the username "standard_user"
-        And the user enters the password "secret_sauce"
-        And clicks the login button
-        Then should see a "Swag Labs" message in content
